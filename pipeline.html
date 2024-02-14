@@ -42,34 +42,23 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
-
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:250px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
-  <!-- Top header -->
-  <header class="w3-container w3-xlarge">
-    <p class="w3-left"></p>
-    <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
-    </p>
   </header>
-
-<h1 id="EV-D68_adapt">Viral Surfing of Heterogeneous Adaptation Landscapes</h1>
-
-<p>Adam Catching, William Bakhache, and Patrick Dolan</p>
-
-<h2 id="abstract">Abstract</h2>
-<p>Adaptation of different temperatures, cell types, and initial strains influence the evolutionary paths of EV-D68. When studying this virus in the context of cell culture adaptation, biases of both the stochastic nature of adaptation and the virus-host determined landscape should be considered, this random nature of condition-dependent selection may be reduced by utilizing a high number of replicates. In this paper, we develop an automated, high-throughput passaging and sequence analysis pipeline called SurfSeq, that allows for two viral strains, a historical and a contemporary strains of EV-D68, to be passaged in parallel in three cell lines, at two temperatures, in octuplet. An important implication of this work is that the strain and cell used for judging the fitness of a mutation may determine which set of mutations are found to be beneficial, and the prototypical EV-D68 strain requires higher genome replication before cell-specific adaptation can occur.</p>
-
-
-      <div class="page-footer">
+    <body>
+    <div class="container">
+      <div class="image">
+        <img src="figures/Web_pipeline.png" alt="pipeline" style="float:center;height:600px;">
       </div>
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
+      <div class="centered-element">
+        <p>Viral stocks from ATCC of EV-D68 Fermon and US/MO/14-18947 were used for passaging in RD, A549, and SH-SY5Y cells. A starting titer of 104 viral units, as measured by TCID50 in RD cells, was serially diluted 10-fold eleven times in 100 uL of viral media in octuplet, then added to pre-seeded plates of RD, A549, and SH-SY5Y cells. Plates were then incubated at either 33oC or 37oC until CPE was detected in the terminally diluted wells. Plates were then freeze-thawed three times and the well four 10-fold dilutions from the terminal dilution with CPE was then consolidated with all other samples of each condition and replicate into one plate containing all samples. This plate was then used for subsequent passaging and for sequencing. Serial dilution and consolidation of passages (passaging_serial_dilution.py and sample_transfer.py, respectively) were performed using automated liquid handling protocols on an OpenTrons OT-2 (https://opentrons.com/products/robots/ot-2/) </p>
+      </div>
+    </div>
+  </body>
 </article> <!-- End Article Page -->
 
 </body>
