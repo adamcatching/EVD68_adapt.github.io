@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>High-throughput Enterovirus D68 Adaptation to Cell, Temperature, and Strain-Specific Conditions</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Initializing website</h1>  
-    </main>
-	<script src="index.js"></script>
-  </body>
+<html>
+<head>
+<title>Viral Surfing of Heterogeneous Adaptation Landscape</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Arial", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
+</style>
+
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>EV-D68<br>Temperature<br>Adaptation</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#" class="w3-bar-item w3-button">Abstact</a>
+    <a href="#" class="w3-bar-item w3-button">Passaging Pipeline</a>
+    <a href="#" class="w3-bar-item w3-button">All Mutations</a>
+    <a href="#" class="w3-bar-item w3-button">Volcano Plots</a>
+    <a href="#" class="w3-bar-item w3-button">Mutation on Structures</a>
+    <a href="#" class="w3-bar-item w3-button">Molecular Biology</a>
+    <a href="#" class="w3-bar-item w3-button">RNAseq</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">People</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">QVEU</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left"></p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+<h1 id="EV-D68_adapt">Viral Surfing of Heterogeneous Adaptation Landscapes</h1>
+
+<p>Adam Catching, William Bakhache, and Patrick Dolan</p>
+
+<h2 id="abstract">Abstract</h2>
+<p>Adaptation of different temperatures, cell types, and initial strains influence the evolutionary paths of EV-D68. When studying this virus in the context of cell culture adaptation, biases of both the stochastic nature of adaptation and the virus-host determined landscape should be considered, this random nature of condition-dependent selection may be reduced by utilizing a high number of replicates. In this paper, we develop an automated, high-throughput passaging and sequence analysis pipeline called SurfSeq, that allows for two viral strains, a historical and a contemporary strains of EV-D68, to be passaged in parallel in three cell lines, at two temperatures, in octuplet. An important implication of this work is that the strain and cell used for judging the fitness of a mutation may determine which set of mutations are found to be beneficial, and the prototypical EV-D68 strain requires higher genome replication before cell-specific adaptation can occur.</p>
+
+
+      <div class="page-footer">
+      </div>
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</body>
 </html>
