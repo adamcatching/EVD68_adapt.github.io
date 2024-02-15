@@ -12,7 +12,6 @@
 .w3-sidebar a {font-family: "Arial", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
 </style>
-
 </head>
 <body class="w3-content" style="max-width:1200px">
 
@@ -50,14 +49,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Abstract
+    <p class="w3-right">
+    </p>
+  </header>
   
 
-<h1 id="EV-D68_adapt">Viral Surfing of Heterogeneous Adaptation Landscapes</h1>
+  <h1 id="EV-D68_adapt">Viral Surfing of Heterogeneous Adaptation Landscapes</h1>
 
-<p>Adam Catching, William Bakhache, and Patrick Dolan</p>
+  <p>Adam Catching, William Bakhache, and Patrick Dolan</p>
 
-<h2 id="abstract">Abstract</h2>
-<p>Adaptation of different temperatures, cell types, and initial strains influence the evolutionary paths of EV-D68. When studying this virus in the context of cell culture adaptation, biases of both the stochastic nature of adaptation and the virus-host determined landscape should be considered, this random nature of condition-dependent selection may be reduced by utilizing a high number of replicates. In this paper, we develop an automated, high-throughput passaging and sequence analysis pipeline called SurfSeq, that allows for two viral strains, a historical and a contemporary strains of EV-D68, to be passaged in parallel in three cell lines, at two temperatures, in octuplet. An important implication of this work is that the strain and cell used for judging the fitness of a mutation may determine which set of mutations are found to be beneficial, and the prototypical EV-D68 strain requires higher genome replication before cell-specific adaptation can occur.</p>
+  <h2 id="abstract">Abstract</h2>
+  <p>Adaptation of different temperatures, cell types, and initial strains influence the evolutionary paths of EV-D68. When studying this virus in the context of cell culture adaptation, biases of both the stochastic nature of adaptation and the virus-host determined landscape should be considered, this random nature of condition-dependent selection may be reduced by utilizing a high number of replicates. In this paper, we develop an automated, high-throughput passaging and sequence analysis pipeline called SurfSeq, that allows for two viral strains, a historical and a contemporary strains of EV-D68, to be passaged in parallel in three cell lines, at two temperatures, in octuplet. An important implication of this work is that the strain and cell used for judging the fitness of a mutation may determine which set of mutations are found to be beneficial, and the prototypical EV-D68 strain requires higher genome replication before cell-specific adaptation can occur.</p>
 
 
       <div class="page-footer">
@@ -67,15 +73,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
 </article> <!-- End Article Page -->
 
 <script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 
 // Open and close sidebar
 function w3_open() {
