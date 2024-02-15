@@ -54,10 +54,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
       <p class="w3-right">
       </p>
     </header>
-    <h1>Structure of the 3D RdRp with consensus mutations</h1>
+    
     <script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>  
     <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
     <div id="container-01" class="mol-container"></div>
+    <h1>Structure of the 3D RdRp with consensus mutations</h1>
+    <div class="centered-element">
     <style>
     .mol-container {
       width: 80%;
@@ -66,17 +68,45 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
     }
 
     </style> 
-      
+    
+      <script>
+        let element = document.querySelector('#container-01');
+        let config = { backgroundColor: 'white' };
+        let viewer = $3Dmol.createViewer( element, config );
+        $3Dmol.download("pdb:5XE0",viewer,{},function(){
+         viewer.setStyle({chain:'A'},{cartoon:{color:'forestgreen'}});
+         viewer.setStyle({resi:["6","11","41","59","95","101","130","277","278","307","345"]},{sphere:{color:"dimgrey"}});
+         viewer.addResLabels({resi:["6","11","41","59","95","101","130","277","278","307","345"]}, {backgroundOpacity:"0.2",font:"Arial",fontColor:"black"})
+         viewer.render();
+        });
+      </script>
+    </div>
+
+    <h1>Structure of the capsomere</h1>
+    <div class="centered-element">
+    <style>
+    .mol-container {
+      width: 80%;
+      height: 600px;
+      position: relative;
+    }
+    </style> 
     <script>
       let element = document.querySelector('#container-01');
       let config = { backgroundColor: 'white' };
       let viewer = $3Dmol.createViewer( element, config );
-      $3Dmol.download("pdb:5XE0",viewer,{},function(){
-       viewer.setStyle({chain:'A'},{cartoon:{color:'forestgreen'}});
-       viewer.setStyle({resi:["6","11","41","59","95","101","130","277","278","307","345"]},{sphere:{color:"dimgrey"}});
+      $3Dmol.download("pdb:7T9P",viewer,{},function(){
+       viewer.setStyle({chain:'A'},{cartoon:{color:'navy'}});
+       viewer.setStyle({chain:'B'},{cartoon:{color:'forestgreen'}});
+       viewer.setStyle({chain:'C'},{cartoon:{color:'firebrick'}});
+       viewer.setStyle({chain:'D'},{cartoon:{color:'goldenrod'}});
+       viewer.setStyle({chain:'B',resi:["6","11","41","59","95","101","130","277","278","307","345"]},{sphere:{color:"dimgrey"}});
+       viewer.addResLabels({chain:'B',resi:["6","11","41","59","95","101","130","277","278","307","345"]}, {backgroundOpacity:"0.2",font:"Arial",fontColor:"black"})
        viewer.render();
       });
     </script>
+    </div>
+
     <div class="page-footer">
     </div>
     </div> <!-- End Wrap Content -->
@@ -106,13 +136,13 @@ function w3_close() {
 }
 
 var addLabels = function () {
-  var atoms = glviewer.getModel().selectedAtoms({
+  var atoms = viewer.getModel().selectedAtoms({
     atom: "CA"
   });
   for (var a in atoms) {
     var atom = atoms[a];
 
-    var l = glviewer.addLabel(atom.resn + " " + atom.resi, {
+    var l = viewer.addLabel(atom.resn + " " + atom.resi, {
       inFront: true,
       fontSize: 12,
       position: {
