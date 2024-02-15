@@ -54,11 +54,13 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
       <p class="w3-right">
       </p>
     </header>
-    
+    <h1>Structure of the 3D RdRp with consensus mutations</h1>
+    <div class="image">
+        <img src="figures/3D_consensus.png" alt="3D Mutations" style="float:center;height:300px;">
+      </div>
     <script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>  
     <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
     <div id="container-01" class="mol-container"></div>
-    <h1>Structure of the 3D RdRp with consensus mutations</h1>
     <div class="centered-element">
     <style>
     .mol-container {
@@ -66,7 +68,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
       height: 600px;
       position: relative;
     }
-
     </style> 
     
       <script>
@@ -81,34 +82,34 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Arial", sans-serif;}
         });
       </script>
     </div>
-
-    <h1>Structure of the capsomere</h1>
-    <div class="centered-element">
-    <style>
-    .mol-container {
-      width: 80%;
-      height: 600px;
-      position: relative;
-    }
-    </style> 
-    <script>
-      let element = document.querySelector('#container-01');
-      let config = { backgroundColor: 'white' };
-      let viewer = $3Dmol.createViewer( element, config );
-      $3Dmol.download("pdb:7T9P",viewer,{},function(){
-       viewer.setStyle({chain:'A'},{cartoon:{color:'navy'}});
-       viewer.setStyle({chain:'B'},{cartoon:{color:'forestgreen'}});
-       viewer.setStyle({chain:'C'},{cartoon:{color:'firebrick'}});
-       viewer.setStyle({chain:'D'},{cartoon:{color:'goldenrod'}});
-       viewer.setStyle({chain:'B',resi:["6","11","41","59","95","101","130","277","278","307","345"]},{sphere:{color:"dimgrey"}});
-       viewer.addResLabels({chain:'B',resi:["6","11","41","59","95","101","130","277","278","307","345"]}, {backgroundOpacity:"0.2",font:"Arial",fontColor:"black"})
-       viewer.render();
-      });
-    </script>
-    </div>
-
-    <div class="page-footer">
-    </div>
+    <h1>Structure of the capsomere with consensus mutations</h1>
+    <div class="image">
+        <img src="figures/capsid_consensus.png" alt="Capsid Mutations" style="float:center;height:300px;">
+      </div>
+    <div id="container-02" class="mol-container"></div>
+      <script>
+        let element2 = document.querySelector('#container-02');
+        let config2 = { backgroundColor: 'white' };
+        let viewer2 = $3Dmol.createViewer(element2, config2 );
+        $3Dmol.download("pdb:7T9P",viewer2,{},function(){
+          viewer2.setStyle({chain:'A'},{cartoon:{color:'navy'}});
+          viewer2.setStyle({chain:'B'},{cartoon:{color:'forestgreen'}});
+          viewer2.setStyle({chain:'C'},{cartoon:{color:'firebrick'}});
+          viewer2.setStyle({chain:'D'},{cartoon:{color:'goldenrod'}});
+          viewer2.setStyle({chain:"A",resi:["45","283"]},{sphere:{color:"dimgrey"}});
+          viewer2.addResLabels({chain:"A",resi:["45","283"]},{backgroundOpacity:"0.2",font:"Arial",fontColor:"navy"});
+          viewer2.setStyle({chain:'B',resi:["135","136","138","144","151","167","211","222","225"]},{sphere:{color:'dimgrey'}});
+          viewer2.addResLabels({chain:'B',resi:["135","136","138","144","151","167","211","222","225"]},{backgroundOpacity:"0.2",font:"Arial",fontColor:"forestgreen"});
+          viewer2.setStyle({chain:'C',resi:["24","126"]},{sphere:{color:"dimgrey"}});
+          viewer2.addResLabels({chain:'C',resi:["24","126"]},{backgroundOpacity:"0.2",font:"Arial",fontColor:"firebrick"});
+          viewer2.render();
+       });
+      </script>
+      <h2 style="color:navy">VP1</h2>
+    <h2 style="color:forestgreen">VP2</h2>
+    <h2 style="color:firebrick">VP3</h2>
+    <h2 style="color:goldenrod">VP4</h2>
+    <div class="page-footer"></div>
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
 </article> <!-- End Article Page -->
